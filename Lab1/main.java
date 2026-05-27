@@ -9,5 +9,7 @@ public class main {
         list.addToEnd(new Song("Dark Side of the Moon", "6","7"));
         list.playAll();
         System.out.println(list.size());
+        list.removeSong("Dark Side of the Moon");
+        list.playAll();
     }
 }

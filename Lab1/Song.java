@@ -1,7 +1,7 @@
 package Lab1;
 
 public class Song {
-    private String name;
+    public String name;
     private String album;
     private String artist;
 

@@ -53,4 +53,24 @@ public class Playlist {
     public int size() {
         return size;
     }
+
+    public void removeSong(String name) {
+        if (head == null) {return;}
+        if (head.data.name.equals(name)) {
+            head = head.next;
+            size--;
+            return;
+        }
+        SongNode prev = head;
+        SongNode node = head.next;
+        while (node != null) {
+            if (node.data.name.equals(name)) {
+                prev.next = node.next;
+                size--;
+                return;
+            }
+            prev = node;
+            node = node.next;
+        }
+    }
 }
